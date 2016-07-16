@@ -1,0 +1,78 @@
+<?php
+/**
+ * The MIT License (MIT)
+ *
+ * Copyright (c) 2011-2014 Webcomm Pty Ltd
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+?>
+<?php
+
+/**
+ * Product media data template
+ *
+ * @see Mage_Catalog_Block_Product_View_Media
+ */
+?>
+<?php
+
+$product = $this->getProduct();
+$helper  = $this->helper('catalog/output');
+
+// Get the base image path
+$baseImageFile = ($product->getImage() != 'no_selection' and $product->getImage()) ? $product->getImage() : false;
+
+$galleryImages = array();
+
+// Process the gallery images
+foreach ($this->getGalleryImages() as $image) {
+    $galleryImages[] = $image;
+}
+
+$baseImageSize = array(
+    'x' => 736,
+    'y' => 460,
+);
+
+$galleryImageSize = array(
+    'x' => 130,
+    'y' => 106,
+);
+
+$zoomSize = array(
+    'x' => 940,
+    'y' => 587,
+);
+
+$index = 0;
+
+?>
+    
+<?php if ($galleryImages): ?>
+    <div class="thumbnail">
+        <div id="sync2" class="owl-carousel">
+            <?php foreach ($galleryImages as $image): ?>
+                <div class="item">
+                    <img src="<?php echo $this->helper('catalog/image')->init($product, 'image', $image->getFile())->resize($galleryImageSize['x'], $galleryImageSize['y']) ?>" alt="<?php echo $this->htmlEscape($image->getLabel()) ?>">
+                </div>
+            <?php endforeach ?>    
+        </div>
+    </div>
+<?php endif ?>

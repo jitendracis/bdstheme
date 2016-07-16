@@ -1,0 +1,377 @@
+@charset "utf-8";
+
+@font-face { font-family: 'effraheavy'; src: url('../fonts/effra_he-webfont.woff2') format('woff2'), url('../fonts/effra_he-webfont.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'effralight'; src: url('../fonts/effra_lt-webfont.woff2') format('woff2'), url('../fonts/effra_lt-webfont.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'effrabold'; src: url('../fonts/effra_std_bd-webfont.woff2') format('woff2'), url('../fonts/effra_std_bd-webfont.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'effraitalic'; src: url('../fonts/effra_std_it-webfont.woff2') format('woff2'), url('../fonts/effra_std_it-webfont.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'effraregular'; src: url('../fonts/effra_std_rg-webfont.woff2') format('woff2'), url('../fonts/effra_std_rg-webfont.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'courierregular'; src: url('../fonts/courier-webfont.woff2') format('woff2'),  url('../fonts/courier-webfont.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'courierbold'; src: url('../fonts/courier-bold-webfont.woff2') format('woff2'),  url('../fonts/courier-bold-webfont.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'courierbold_oblique'; src: url('../fonts/courier-boldoblique-webfont.woff2') format('woff2'),  url('../fonts/courier-boldoblique-webfont.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'courieroblique'; src: url('../fonts/courier-oblique-webfont.woff2') format('woff2'),  url('../fonts/courier-oblique-webfont.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+body { margin: 0; padding: 0; font-family: 'effraregular'; color: #040707; }
+
+* { margin: 0; padding: 0; font-weight: normal; text-decoration: none; border: none; outline: none; box-sizing: border-box; }
+
+img { max-width: 100% }
+
+/*----------------header--------------*/
+.header { background: #fff; border-bottom: 20px solid #000; }
+
+.container { max-width: 1160px; width: 100%; margin: 0 auto; }
+
+.logo { float: left; margin: 15px 0; width: 139px; }
+
+.header_right { float: right; padding: 25px 0 0; }
+
+.clear { clear: both; }
+
+.header_right_top > ul { text-align: right; }
+
+.header_right_top ul li { display: inline-block; list-style: outside none none; margin-left: 40px; }
+
+.header_right_top ul li a { font-size: 14px; color: #040707; letter-spacing: 1px; }
+
+.header_right_top ul li:last-child { background: #000; padding: 0px 15px 3px; }
+
+.header_right_top ul li:last-child a { color: #fff; }
+
+.header_right_top ul li:last-child a i { margin-left: 5px; }
+
+.header_right_top ul li span { border-left: 1px solid #040707; font-family: "effraregular"; line-height: 14px; padding: 0 5px; }
+
+.header_right_top ul li span:first-child { border: medium none; }
+
+.header_right_top ul li span a { font-family: "effraregular"; }
+
+.header_right_top { margin-bottom: 37px; }
+
+.header_right_top ul li span a.active { font-family: 'effrabold'; }
+
+.nav li.active a { font-family: 'effrabold'; color: #fff; background-color: #040707; }
+
+.nav li:hover a { color: #fff; background-color: #040707; }
+
+.menu { margin: 0 -15px; }
+
+/*----------------------product_category-----------------*/
+.product ul.products-grid li { display: block; float: left; list-style: outside none none; padding: 14px; text-align: center; width: 395px; position: relative;}
+
+.product > ul.products-grid { margin: 0 -14px; }
+
+.product ul.products-grid .product_image img { display: block; }
+
+.product ul.products-grid .product_name { background: #eae8df none repeat scroll 0 0; min-height: 118px; padding: 25px 0 16px; }
+
+.product ul.products-grid .product_name h2 { font-size: 24px; margin-bottom: 6px; }
+
+.product ul.products-grid .product_name p { font-size: 13px; margin-bottom: 9px; }
+
+.product ul.products-grid .product_name span { font-size: 13px; margin-bottom: 10px; color: #040707; font-weight: normal;}
+
+.product ul.products-grid .product_btn { background: #040707; color: #fff; display: block; font-family: "effrabold"; font-size: 14px; padding: 5px 0; }
+
+.product ul.products-grid .product_btn:hover { background: #eae8df; color: #040707; }
+
+.product ul.products-grid .product_btn_outofstock { background: #040707; color: #fff; display: block; font-family: "effrabold"; font-size: 14px; padding: 5px 0; }
+
+.product { padding: 46px 0; }
+
+/*--------------------footer-------------------*/
+.footer_top { background: #f6f7f4; min-height: 200px; padding-bottom: 30px; padding-top: 48px; }
+
+.footer_menu h3 { font-size: 11px; color: #040707; background: #fff; font-family: "effrabold"; display: inline-block; padding: 3px 17px; margin-bottom: 15px; }
+
+.footer_menu li { list-style: none; float: left; width: 33.33%; }
+
+.footer_menu li a { color: #040707; display: block; font-size: 20px; line-height: 32px; margin: 0 20px; text-decoration: underline; font-family: 'courierregular'; }
+
+.footer_menu li p { margin: 0 20px 25px; font-size: 20px; line-height: 25px; font-family: 'courierregular'; }
+
+.footer_menu { margin-left: 71px; }
+
+.footer_mid { background: #eae8df; min-height: 360px; padding-bottom: 30px; padding-top: 48px; }
+
+.footer_menu p a { display: inline-block; margin: 0 10px 0 0; }
+
+.footer_bottom { background: #040707; height: 30px; }
+
+.footer_bottom ul li { display: inline-block; list-style: outside none none; }
+
+.footer_bottom ul li a { color: #fff; font-family: "effrabold"; font-size: 11px; display: block; padding: 8px 10px; }
+
+.footer_menu li a.subscribe_btn { background: #040707; color: #fff; text-align: left; text-decoration: none; font-size: 14px; }
+
+.subscribe_btn > img { margin: 0 15px; vertical-align: middle; }
+
+/*-----------------product view------------------*/
+.product_left { float: left; margin-right: 28px; width: 665px; }
+
+.product_left_in { position: relative; margin-bottom: 28px; }
+
+.product_right img { vertical-align: middle; }
+
+.product_right { float: right; /*min-height: 544px;*/ position: relative; width: 40%; }
+
+.pro_detail_table .col_1 { border-bottom: 1px solid #040707; display: block; float: left; list-style: outside none none; width: 25%; }
+
+.pro_detail_table .col_2 { border-bottom: 1px solid #040707; display: block; float: left; list-style: outside none none; width: 75%; }
+
+.pro_detail_table .col_3 { border-bottom: 1px solid #040707; display: block; float: left; list-style: outside none none; width: 100%; padding: 5px 0; }
+
+.pro_detail_table { border-top: 1px solid #040707; margin-bottom: 20px; overflow: hidden; }
+
+.pro_detail_table li { font-size: 13px; padding: 8px 0; }
+
+.col_3 > a { margin-right: 5px; }
+
+.product_view { padding: 60px 0; }
+
+.product_right h2 { font-size: 45px; line-height: 30px; margin-bottom: 25px; }
+
+.product_right > h3 { font-size: 14px; line-height: 20px; margin-bottom: 10px; }
+
+.product_right > h3 a { color: #71ab73; }
+
+.product_right p { font-size: 13px; line-height: 20px; margin-bottom: 25px; }
+
+.product_view  .thumbnail .item { padding: 0 8px; }
+
+.product_view .thumbnail { margin: 10px -8px 58px; }
+
+.item > img { display: block; width:100%;}
+
+.pro_left_con { float: left; padding: 0 50px; width: 60%; }
+
+.pro_right_con { float: left; padding-left: 28px; width: 40%; }
+
+.pro_left_con > h4, .pro_right_con > h4 { background: #eae8df none repeat scroll 0 0; display: inline-block; font-size: 11px; padding: 3px 15px; font-family: "effrabold"; margin-bottom: 10px; }
+
+.pro_left_con > div { font-size: 20px; line-height: 30px; font-family: 'courierregular'; }
+
+.pro_right_con > div { font-size: 13px; line-height: 18px; margin-bottom: 15px; }
+
+.product_right p.price { font-size: 30px; margin: 0 0 20px; }
+
+.sort_form input { border: 1px solid #000; font-weight: bold; height: 25px; padding: 4px 0; text-align: center; width: 40px; }
+
+.sort_form button { background: #040707; color: #fff; font-size: 14px; height: 25px; margin: 0 0 15px; padding: 0 30px; font-family: "effrabold"; cursor: pointer; }
+
+.sort_form button:hover { background: #EAE8DF; color: #040707; }
+
+.share_btn .fa { margin-right: 13px; }
+
+.share_btn { background: #040707; bottom: 0; color: #fff; display: inline-block; font-family: "effrabold"; font-size: 14px; height: 25px; padding: 4px 30px 0 15px; position: relative; }
+
+.share_btn:hover { background: #EAE8DF; color: #040707; }
+
+.nav li li { margin: 0; }
+
+.product_view .thumbnail .owl-carousel .owl-item { float: left;}
+
+#sync1 .owl-next { background: rgba(0, 0, 0, 0) url("../images/arrow_left.jpg") no-repeat scroll center center; height: 25px; margin-top: -12px; position: absolute; right: 28px; text-indent: -9999px; top: 50%; width: 65px; }
+
+#sync1 .owl-prev { background: url(../images/arrow_right.jpg) no-repeat center center; height: 25px; margin-top: -12px; position: absolute; left: 28px; text-indent: -9999px; top: 50%; width: 65px; }
+
+/*---------------------------product_detail-----------------*/
+.product_detail { max-width: 1018px; padding: 60px 28px; margin: 0 auto; }
+
+.product_detail h2 { display: inline-block; font-size: 45px; margin-bottom: 25px; line-height: 30px;}
+
+.right_btn { float: right; margin: 8px 0; }
+
+.btn_sm:hover { background: #EAE8DF; color: #040707; }
+
+.btn_sm { background: #040707; color: #fff; display: inline-block; font-size: 14px; height: 25px; padding: 4px 30px; font-family: "effrabold"; cursor:pointer;}
+
+.top_heading { background: #eae8df none repeat scroll 0 0; font-size: 22px; margin-bottom: 25px; padding: 20px; text-align: center; }
+
+.product_detail .table_responsive td, .product_detail .table_responsive th { border-top: 1px solid #040707; padding: 10px 10px 10px 0; font-size: 16px; text-align: left; }
+
+.product_detail .table_responsive th { vertical-align: bottom; font-size: 13px; font-family: "effrabold"; }
+
+.table_responsive { margin: 0 -10px; }
+
+.product_detail .table_responsive td input { border: 1px solid #000; font-weight: bold; height: 25px; text-align: center; width: 50px; margin: 0; width: 50px; padding:0; line-height:20px;}
+
+.product_detail .table_responsive td a .fa { border: 1px solid #040707; color: #040707; height: 25px; padding: 3px 10px; }
+.detail_col_1 {
+    border-bottom: 1px solid #040707;
+    border-top: 1px solid #040707;
+    float: left;
+    margin-right: 28px;
+    padding: 10px 0 20px;
+    width: 30%;
+}
+.detail_col_2 {
+    background: #eae8df none repeat scroll 0 0;
+    float: right;
+    font-size: 13px;
+    margin-right: 0;
+    padding: 25px;
+    width: 232px;
+}
+.detail_col_2 table { margin-bottom:20px;}
+.detail_col_2 table td {border-top: 1px solid #040707; padding:7px 0;}
+.detail_col_1 > h3 { font-size:20px; line-height:30px; font-family: 'courierregular'; margin-bottom:15px;}
+.detail_col_1 > p { font-size:13px; margin-bottom:20px;}
+.detail_col_1 > label { font-size:13px; margin-bottom:10px; display:block;}
+.select_box { position:relative; margin-bottom:20px;}
+.select_box select { width:100%; background:#eae8df; height:40px; padding:10px 7px; -webkit-appearance: none;}
+.detail_col_1 > input[type=text] { width:100%; background:#eae8df; height:40px; padding:10px 15px; margin-bottom:20px;}
+.select_box:after { position:absolute; content:""; background:url(../images/arrow_select.jpg) no-repeat 0 0; width:27px; height:40px; right:0; pointer-events: none; top: 0;}
+.detail_bottom {
+    padding-top: 28px;
+}
+.checkout_col {
+    float: left;
+    width: 33.33%;
+}
+.checkout_form label {
+    border-bottom: 1px solid #000;
+    display: block;
+    margin-bottom: 30px;
+    padding: 10px 0; margin-right: -28px; text-align: left; font-size:13px;
+}
+.checkout_form input[type="text"] {
+    background: #eae8df;
+    display: block;
+    height: 35px;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+	width:100%;
+}
+.checkout_col p, .checkout_col1 p {
+    padding: 0 14px;
+}
+.col_row {
+    margin: 0 -14px;
+}
+.checkout_form {
+    overflow: hidden;
+}
+.checkout_col1 button {
+    margin-left: 10px;
+}
+.product_detail h4 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.checkbox input[type="checkbox"]:not(old) + label {
+    background: rgba(0, 0, 0, 0) url("../images/uncheck.jpg") repeat scroll 0 0;
+    border: medium none;
+    display: inline-block;
+    height: 30px;
+    line-height: 24px;
+    margin: 0 0 0 -30px;
+    padding-left: 16px;
+    width: 30px;
+}
+.checkbox input[type="checkbox"]:checked:not(old) + label {
+    background: rgba(0, 0, 0, 0) url("../images/checked.jpg") repeat scroll 0 0;
+}
+.checkbox input[type="checkbox"] {
+    height: 30px;
+    opacity: 0;
+    position: relative;
+    width: 30px;
+    z-index: 999;
+}
+.checkbox {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.checkbox { clear:both; margin-bottom:25px;}
+.rlAccordion > h3 + div {
+    display: none;
+}
+.checkout_bds #thirth h3 {
+    background: #eae8df none repeat scroll 0 0;
+    font-size: 22px;
+    margin: 0 0 15px 0;
+    border: 0px;
+    border-radius: 0px;
+    padding: 15px 0;
+    color: #040707;
+    font-weight: normal;
+    line-height: normal;
+}
+.checkout_bds #thirth h3 span {
+    background: #040707 none repeat scroll 0 0;
+    color: #fff;
+    display: inline-block;
+    padding: 0 15px;
+    margin-right:10px;
+    line-height: normal
+}
+.checkout_bds #thirth h3 a{
+    font-weight: normal;
+    font-size: 14px;
+    padding: 0px 10px;
+    line-height: 26px;
+    color: #040707;
+}
+.checkout_bds #thirth .step.a-item{
+    padding: 0;
+    border: 0px;
+    box-shadow: none;
+    border-radius: 0px;
+}
+.opened p {
+    margin-bottom: 20px; font-size:14px;
+}
+.opened p span {font-family: "effrabold"; display:block; margin:0 0 5px}
+.opened span {font-family: "effrabold"; display:block; margin:0 0 15px}
+.tab_col {
+    float: left;
+    padding: 0 14px;
+    width: 50%;
+}
+.tab_con {
+    margin: 0 -14px;
+}
+.tab_col_in {
+    border-bottom: 1px solid #040707;
+    border-top: 1px solid #040707;
+    padding: 15px 0 0;
+	margin-bottom:20px;
+}
+.tab_col_in > h3 {
+    margin-bottom: 15px;
+}
+input[type="text"] {
+    background: #eae8df none repeat scroll 0 0;
+    display: block;
+    height: 35px;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    width: 100%;
+}
+.tab_col_in label {
+    margin-bottom: 10px; font-size:14px; display:block;
+} 
+.opened p.checkbox > span {
+    display: inline-block;
+    margin-left: 5px;
+    margin-top: -19px;
+    vertical-align: middle;
+}
+.tab_col p button {
+    float: right;
+    margin-bottom: 30px;
+}
+
+.tab_con {
+    margin: 0 -14px;
+    padding: 20px 0 40px;
+}

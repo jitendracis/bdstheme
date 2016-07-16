@@ -1,0 +1,17 @@
+<?php $_helper = $this->helper('catalog/output'); ?>
+<?php $_product = $this->getProduct(); ?>
+<ul class="pro_detail_table">
+    <?php if($_product->getManufacturer()){ ?>
+    <li class="col_1"><?php echo $_product->getResource()->getAttribute('manufacturer')->getStoreLabel();?>:</li>
+    <li class="col_2"><?php echo $_product->getAttributeText('manufacturer');?></li>
+    <?php } ?>
+    <?php if($_product->getWeight()){ ?>
+    <li class="col_1"><?php echo $_product->getResource()->getAttribute('weight')->getStoreLabel();?>:</li>
+    <li class="col_2"><?php echo $_product->getWeight();?></li>
+    <?php } ?>
+    <?php if($_product->getColor()){ ?>
+    <li class="col_1"><?php echo $_product->getResource()->getAttribute('color')->getStoreLabel()?>:</li>
+    <li class="col_2"><?php echo $_product->getAttributeText('color');?></li>
+    <?php } ?>
+    <li class="col_3"><a href="#"><img src="<?php echo Mage::getDesign()->getSkinUrl(); ?>images/download_btn.png" alt=""></a>Bedienungs- und Montageanleitung</li>
+</ul>

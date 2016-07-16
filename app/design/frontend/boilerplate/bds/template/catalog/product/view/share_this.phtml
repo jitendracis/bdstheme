@@ -1,0 +1,25 @@
+<?php
+$product = $this->getProduct();
+$helper  = $this->helper('catalog/output');
+$productName = $helper->productAttribute($product, $product->getName(), 'name');
+$productUrl = $helper->productAttribute($product, $product->getProductUrl(), 'product_url');
+$productImage = $product->getImageUrl();
+?>
+<div class="share_this">
+    <?php if(Mage::getStoreConfig('bds/bds_group/bds_googleshare')) { ?>
+    <!--Google Plus-->
+    <a href="javascript:popWin('https://plus.google.com/share?url=<?php echo urlencode($productUrl); ?>', 'google', 'width=640,height=480,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes');" title="<?php echo $this->__('Share on Google Plus') ?>"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+    <?php } ?>
+    <?php if(Mage::getStoreConfig('bds/bds_group/bds_facebookshare')) { ?>
+    <!--Facebook-->
+    <a href="javascript:popWin('https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode($productUrl); ?>&t=<?php echo urlencode($productName); ?>', 'facebook', 'width=640,height=480,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes');" title="<?php echo $this->__('Share on Facebook') ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+    <?php } ?>
+    <?php if(Mage::getStoreConfig('bds/bds_group/bds_twittershare')) { ?>
+    <!--Twitter-->
+    <a href="javascript:popWin('http://twitter.com/home/?status=<?php echo urlencode($productName . ' (' . $productUrl . ')'); ?>', 'twitter', 'width=640,height=480,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes');" title="<?php echo $this->__('Tweet') ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    <?php } ?>
+    <?php if(Mage::getStoreConfig('bds/bds_group/bds_pinterestshare')) { ?>
+    <!--Pinterest-->
+    <a href="javascript:popWin('https://pinterest.com/pin/create/button/?url=<?php echo urlencode($productUrl); ?>&media=<?php echo urlencode($productImage); ?>&description=<?php echo urlencode($productName); ?>', 'pinterest', 'width=640,height=480,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes');" title="<?php echo $this->__('Pin it') ?>"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+    <?php } ?>
+</div>
