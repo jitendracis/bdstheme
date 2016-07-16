@@ -1,0 +1,8 @@
+app/code/community/Webcomm/BootstrapNavigation  app/code/community/Webcomm/BootstrapNavigation
+app/code/community/Webcomm/MagentoBoilerplate   app/code/community/Webcomm/MagentoBoilerplate
+app/code/local/Bds/General                      app/code/local/Bds/General
+app/design/frontend/boilerplate/bds             app/design/boilerplate/choba/bds
+app/etc/modules/Bds_General.xml                 app/code/local/Bds_General.xml
+app/etc/modules/Webcomm_BootstrapNavigation.xml app/code/local/Webcomm_BootstrapNavigation.xml
+app/etc/modules/Webcomm_MagentoBoilerplate.xml  app/code/local/Webcomm_MagentoBoilerplate.xml
+skin/frontend/boilerplate/bds                   skin/frontend/boilerplate/bds
